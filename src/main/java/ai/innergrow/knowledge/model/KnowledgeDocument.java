@@ -1,38 +1,26 @@
 package ai.innergrow.knowledge.model;
 
-import jakarta.persistence.*;
 import java.time.LocalDateTime;
 
 /**
- * Entity representing extracted knowledge stored in PostgreSQL
+ * Model representing extracted knowledge
  */
-@Entity
-@Table(name = "knowledge_documents")
 public class KnowledgeDocument {
     
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    @Column(nullable = false)
     private String fileName;
 
-    @Column(nullable = false)
     private String filePath;
 
-    @Column(columnDefinition = "TEXT")
     private String content;
 
-    @Column(columnDefinition = "TEXT")
     private String metadata;
 
-    @Column(nullable = false)
     private LocalDateTime extractedAt;
 
-    @Column(nullable = false)
     private boolean processingSuccess;
 
-    @Column(columnDefinition = "TEXT")
     private String errorMessage;
 
     public KnowledgeDocument() {
@@ -55,4 +43,51 @@ public class KnowledgeDocument {
         this.fileName = fileName;
     }
 
-    public String
+    public String getFilePath() {
+        return filePath;
+    }
+
+    public void setFilePath(String filePath) {
+        this.filePath = filePath;
+    }
+
+    public String getContent() {
+        return content;
+    }
+
+    public void setContent(String content) {
+        this.content = content;
+    }
+
+    public String getMetadata() {
+        return metadata;
+    }
+
+    public void setMetadata(String metadata) {
+        this.metadata = metadata;
+    }
+
+    public LocalDateTime getExtractedAt() {
+        return extractedAt;
+    }
+
+    public void setExtractedAt(LocalDateTime extractedAt) {
+        this.extractedAt = extractedAt;
+    }
+
+    public boolean isProcessingSuccess() {
+        return processingSuccess;
+    }
+
+    public void setProcessingSuccess(boolean processingSuccess) {
+        this.processingSuccess = processingSuccess;
+    }
+
+    public String getErrorMessage() {
+        return errorMessage;
+    }
+
+    public void setErrorMessage(String errorMessage) {
+        this.errorMessage = errorMessage;
+    }
+}

@@ -1,0 +1,4 @@
+# PaddleOCR for PDF parsing and OCR
+paddleocr==3.3.2
+# Additional utilities
+opencv-python==4.8.1.78

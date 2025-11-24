@@ -6,6 +6,8 @@ import java.util.Map;
 /**
  * Represents the result from Python PDF parsing script
  */
+
+
 public class PdfParseResult {
     
     private String fileName;

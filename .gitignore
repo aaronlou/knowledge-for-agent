@@ -4,6 +4,18 @@ target/
 !**/src/main/**/target/
 !**/src/test/**/target/
 
+### Python ###
+venv/
+.Python
+*.pyc
+__pycache__/
+*.pyo
+*.pyd
+.env
+
+### Data Storage ###
+data/
+
 ### STS ###
 .apt_generated
 .classpath
